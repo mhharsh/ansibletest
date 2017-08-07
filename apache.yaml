@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - apt: 
-        name: apache
+        name: apache2
         state: present
       
