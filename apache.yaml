@@ -1,5 +1,5 @@
 - name: Install apache
-  hosts: towertest1
+  hosts: all
   become: yes
   tasks:
     - apt: 
