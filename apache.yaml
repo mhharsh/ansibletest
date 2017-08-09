@@ -1,5 +1,5 @@
 - name: Install apache
-  hosts: all
+  hosts: tower1
   become: yes
   tasks:
     - apt: 
