@@ -4,12 +4,15 @@
   tasks:
     - apt: name ={{item}} state=present 
       with_items:
-        - python-setuptools
-        - python-pip
+        # - python-setuptools
+        # - python-pip
         - docker
         - docker.io
-        - python-dev 
-        - build-essential 
+        # - python-dev 
+        # - build-essential 
+
+    - apt: name =pip state=present 
+     
 
     - command: easy_install pip
 
@@ -20,7 +23,7 @@
         - pyyaml
 
     - docker_service:
-        project_src: wordress
+        project_src: wordpress
         build: yes
         state: present
       register: output
