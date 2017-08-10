@@ -2,18 +2,20 @@
   become: yes
   hosts: towertest2
   tasks:
-    - apt: name ={{item}} state=present 
-      with_items:
-        # - python-setuptools
-        # - python-pip
-        - docker
-        - docker.io
-        # - python-dev 
-        # - build-essential 
+    # - apt: 
+    #     name: {{ item }} 
+    #     state: present 
+    #   with_items:
+    #     # - python-setuptools
+    #     # - python-pip
+    #     - docker
+    #     - docker.io
+    #     # - python-dev 
+    #     # - build-essential 
 
     - apt: name=pip state=present 
      
-    - command: easy_install pip
+    # - command: easy_install pip
 
     - pip : name={{item}}
       with_items:
