@@ -2,7 +2,7 @@
   become: yes
   hosts: towertest2
   tasks:
-    - apt: name ={{ item }} state=present update_cache=yes
+    - apt: name ={{ item }} state=present 
       with_items:
         - python-setuptools
         - python-pip
@@ -12,7 +12,7 @@
         - build-essential 
 
     - command: easy_install pip
-    
+
     - pip : name={{ item }}
       with_items:
         - docker-compose
