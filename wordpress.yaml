@@ -13,7 +13,7 @@
     #     # - python-dev 
     #     # - build-essential 
 
-    - apt: name=pip state=present 
+    - apt: name=python-pip state=present 
      
     # - command: easy_install pip
 
