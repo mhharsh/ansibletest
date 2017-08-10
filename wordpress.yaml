@@ -4,8 +4,16 @@
   tasks:
     - apt: name ={{ item }} state=present update_cache=yes
       with_items:
+        - python-setuptools
+        - python-pip
         - docker
         - docker.io
+
+    - pip : name={{ item }}
+      with_items:
+        - docker-compose
+        - docker-py
+        - pyyaml
 
     - docker_service:
         project_src: wordress
