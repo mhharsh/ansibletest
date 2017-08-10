@@ -1,4 +1,5 @@
 - name: Playbook to install docker and run wordpress as container
+  become: yes
   hosts: towertest2
   tasks:
     - apt: name ={{ item }} state=present update_cache=yes
