@@ -8,7 +8,11 @@
         - python-pip
         - docker
         - docker.io
+        - python-dev 
+        - build-essential 
 
+    - command: easy_install pip
+    
     - pip : name={{ item }}
       with_items:
         - docker-compose
