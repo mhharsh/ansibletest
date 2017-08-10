@@ -1,12 +1,10 @@
 - name: Playbook to install docker and run wordpress as container
   hosts: towertest2
   tasks:
-    - apt:
-        name: {{ item }}
-        state: present
-        with_items:
-          - docker
-          - docker.io
+    - apt: name ={{ item }} state=present
+      with_items:
+        - docker
+        - docker.io
 
     - docker_service:
         project_src: wordress
