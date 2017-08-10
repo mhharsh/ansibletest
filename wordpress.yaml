@@ -2,7 +2,7 @@
   become: yes
   hosts: towertest2
   tasks:
-    - apt: name ={{ item }} state=present 
+    - apt: name ={{item}} state=present 
       with_items:
         - python-setuptools
         - python-pip
@@ -13,7 +13,7 @@
 
     - command: easy_install pip
 
-    - pip : name={{ item }}
+    - pip : name={{item}}
       with_items:
         - docker-compose
         - docker-py
