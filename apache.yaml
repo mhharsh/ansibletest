@@ -5,4 +5,8 @@
     - apt: 
         name: apache2
         state: present
+
+    - apt: 
+        name: mysql
+        state: present
       
