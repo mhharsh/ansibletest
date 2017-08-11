@@ -46,7 +46,6 @@
         debug=yes
 
     - docker_service:
-        build: yes
         state: present
         definition:
           wordpress:
